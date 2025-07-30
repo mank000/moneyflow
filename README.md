@@ -40,6 +40,7 @@ docker compse moneyflow exec python manage.py loaddata initial_data
 Основной интерфейс: http://localhost/
 
 🛠 Стек
+
 Python / Django
 
 SQLite (по умолчанию)
