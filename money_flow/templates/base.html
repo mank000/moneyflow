@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Мои данные{% endblock %}</title>
+    <style>
+        table {
+          border-collapse: collapse; /* чтобы границы слиплись */
+          width: 100%;
+        }
+        th, td {
+          border: 1px solid #333;
+          padding: 8px;
+          text-align: left;
+        }
+        </style>
+        <script src="/static/smart-selects/admin/js/chainedfk.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'entities:moneyflow_list' %}">Денежные потоки</a> |
+        <a href="{% url 'entities:status_list' %}">Статусы</a> |
+        <a href="{% url 'entities:type_list' %}">Типы</a> |
+        <a href="{% url 'entities:category_list' %}">Категории</a> |
+        <a href="{% url 'entities:subcategory_list' %}">Подкатегории</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

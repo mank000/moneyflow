@@ -1,0 +1,21 @@
+version: '3.3'
+
+volumes:
+  static:
+
+services:
+
+  moneyflow:
+    image: mank000/moneyflow
+    env_file: .env
+    volumes:
+      - static:/backend_static
+  
+  nginx:
+    depends_on:
+      - moneyflow
+    image: mank000/moneyflow_nginx
+    ports:
+      - 8000:80
+    volumes:
+      - static:/staticfiles

@@ -1,0 +1,199 @@
+[
+    {
+      "model": "entities.status",
+      "pk": 1,
+      "fields": {
+        "name": "Запланировано"
+      }
+    },
+    {
+      "model": "entities.status",
+      "pk": 2,
+      "fields": {
+        "name": "Выполнено"
+      }
+    },
+    {
+      "model": "entities.status",
+      "pk": 3,
+      "fields": {
+        "name": "Отменено"
+      }
+    },
+    {
+      "model": "entities.type",
+      "pk": 1,
+      "fields": {
+        "name": "Списание"
+      }
+    },
+    {
+      "model": "entities.type",
+      "pk": 2,
+      "fields": {
+        "name": "Поступление"
+      }
+    },
+    {
+      "model": "entities.category",
+      "pk": 1,
+      "fields": {
+        "name": "Маркетинг",
+        "type": 1
+      }
+    },
+    {
+      "model": "entities.category",
+      "pk": 2,
+      "fields": {
+        "name": "Зарплаты",
+        "type": 1
+      }
+    },
+    {
+      "model": "entities.category",
+      "pk": 3,
+      "fields": {
+        "name": "Продажи",
+        "type": 2
+      }
+    },
+    {
+      "model": "entities.category",
+      "pk": 4,
+      "fields": {
+        "name": "Инвестиции",
+        "type": 2
+      }
+    },
+    {
+      "model": "entities.subcategory",
+      "pk": 1,
+      "fields": {
+        "name": "Avito",
+        "category": 1
+      }
+    },
+    {
+      "model": "entities.subcategory",
+      "pk": 2,
+      "fields": {
+        "name": "Farpost",
+        "category": 1
+      }
+    },
+    {
+      "model": "entities.subcategory",
+      "pk": 3,
+      "fields": {
+        "name": "IT-отдел",
+        "category": 2
+      }
+    },
+    {
+      "model": "entities.subcategory",
+      "pk": 4,
+      "fields": {
+        "name": "Бухгалтерия",
+        "category": 2
+      }
+    },
+    {
+      "model": "entities.subcategory",
+      "pk": 5,
+      "fields": {
+        "name": "Опт",
+        "category": 3
+      }
+    },
+    {
+      "model": "entities.subcategory",
+      "pk": 6,
+      "fields": {
+        "name": "Розница",
+        "category": 3
+      }
+    },
+    {
+      "model": "entities.subcategory",
+      "pk": 7,
+      "fields": {
+        "name": "Вклады",
+        "category": 4
+      }
+    },
+    {
+      "model": "entities.subcategory",
+      "pk": 8,
+      "fields": {
+        "name": "Паи",
+        "category": 4
+      }
+    },
+    {
+      "model": "entities.moneyflow",
+      "pk": 1,
+      "fields": {
+        "date_of_creation": "2025-07-28",
+        "status": 2,
+        "type": 1,
+        "category": 1,
+        "sub_category": 1,
+        "total": "4500.00",
+        "description": "Продвижение на Avito"
+      }
+    },
+    {
+      "model": "entities.moneyflow",
+      "pk": 2,
+      "fields": {
+        "date_of_creation": "2025-07-27",
+        "status": 2,
+        "type": 2,
+        "category": 3,
+        "sub_category": 5,
+        "total": "85000.00",
+        "description": "Продажа товара по оптовой цене"
+      }
+    },
+    {
+      "model": "entities.moneyflow",
+      "pk": 3,
+      "fields": {
+        "date_of_creation": "2025-07-26",
+        "status": 1,
+        "type": 1,
+        "category": 2,
+        "sub_category": 3,
+        "total": "120000.00",
+        "description": "Зарплата программистам"
+      }
+    },
+    {
+      "model": "entities.moneyflow",
+      "pk": 4,
+      "fields": {
+        "date_of_creation": "2025-07-25",
+        "status": 2,
+        "type": 2,
+        "category": 4,
+        "sub_category": 7,
+        "total": "30000.00",
+        "description": "Проценты по вкладу"
+      }
+    },
+    {
+      "model": "entities.moneyflow",
+      "pk": 5,
+      "fields": {
+        "date_of_creation": "2025-07-24",
+        "status": 3,
+        "type": 1,
+        "category": 1,
+        "sub_category": 2,
+        "total": "3000.00",
+        "description": "Реклама на Farpost"
+      }
+    }
+  ]
+  

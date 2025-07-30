@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Удалить запись</h1>
+<p>Вы уверены, что хотите удалить подкатегорию</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Да, удалить</button>
+    <a href="{% url 'entities:subcategory_list' %}">Отмена</a>
+</form>
+{% endblock %}

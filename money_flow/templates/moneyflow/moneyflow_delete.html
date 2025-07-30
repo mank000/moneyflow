@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Удалить запись</h1>
+<p>Вы уверены, что хотите удалить эту запись?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Да, удалить</button>
+    <a href="{% url 'entities:moneyflow_list' %}">Отмена</a>
+</form>
+{% endblock %}

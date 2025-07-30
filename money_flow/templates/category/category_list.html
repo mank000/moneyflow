@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Категории</h1>
+<form method="get">
+    <label>Фильтр по типу:</label>
+    <select name="type">
+        <option value="">Все</option>
+        {% for t in types %}
+            <option value="{{ t.id }}" {% if t.id|stringformat:"s" == selected_type %}selected{% endif %}>
+                {{ t.name }}
+            </option>
+        {% endfor %}
+    </select>
+    <button type="submit">Фильтровать</button>
+</form>
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Тип</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for category in categories %}
+        <tr>
+            <td>{{ category.id }}</td>
+            <td>{{ category.name }}</td>
+            <td>{{ category.type.name }}</td>
+            <td>
+                <a href="{% url 'entities:category_update' category.pk %}">✏️</a>
+                <a href="{% url 'entities:category_delete' category.pk %}">🗑️</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="3">Нет данных</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'entities:category_create' %}" class="add-button">➕ Добавить запись</a>
+{% endblock %}

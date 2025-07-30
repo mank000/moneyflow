@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{% if flow %}Редактировать{% else %}Добавить{% endif %} запись</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.media.js }}
+    {{ form.as_p }}
+    <button type="submit">Сохранить</button>
+</form>
+<a href="{% url 'entities:type_list' %}">Назад к списку</a>
+{% endblock %}
