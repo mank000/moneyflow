@@ -1,11 +1,14 @@
 {% extends "base.html" %}
+{% load django_bootstrap5 %}
 {% block content %}
 <h1>{% if flow %}Редактировать{% else %}Добавить{% endif %} запись</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.media.js }}
-    {{ form.as_p }}
-    <button type="submit">Сохранить</button>
-</form>
+<div class="card col-5">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.media.js }}
+        {% bootstrap_form form %}
+        {% bootstrap_button button_type="submit" content="Сохранить" %}
+    </form>
+</div>
 <a href="{% url 'entities:status_list' %}">Назад к списку</a>
 {% endblock %}

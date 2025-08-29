@@ -9,8 +9,8 @@ load_dotenv()
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-DEBUG = True if os.getenv("DEBUG", False) == "True" else False
-
+# DEBUG = True if os.getenv("DEBUG", False) == "True" else False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_bootstrap5",
     "smart_selects",
     "rangefilter",
     "entities.apps.EntitiesConfig",

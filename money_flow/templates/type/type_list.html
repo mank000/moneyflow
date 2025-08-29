@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load django_bootstrap5 %}
 {% block content %}
 <h1>Типы</h1>
 <table border="1" cellpadding="5" cellspacing="0">
@@ -24,5 +24,5 @@
         {% endfor %}
     </tbody>
 </table>
-<a href="{% url 'entities:type_create' %}" class="add-button">➕ Добавить запись</a>
+<a href="{% url 'entities:type_create' %}" class="add-button btn btn-primary">➕ Добавить запись</a>
 {% endblock %}

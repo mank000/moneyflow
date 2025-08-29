@@ -3,6 +3,9 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
     <title>{% block title %}Мои данные{% endblock %}</title>
     <style>
         table {

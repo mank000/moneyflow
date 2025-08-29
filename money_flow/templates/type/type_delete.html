@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load django_bootstrap5 %}
 {% block content %}
 <h1>Удалить запись</h1>
 <p>Вы уверены, что хотите удалить тип?</p>
 <form method="post">
     {% csrf_token %}
-    <button type="submit">Да, удалить</button>
+    {% bootstrap_button button_type="submit" content="Да, удалить" %}
     <a href="{% url 'entities:type_list' %}">Отмена</a>
 </form>
 {% endblock %}

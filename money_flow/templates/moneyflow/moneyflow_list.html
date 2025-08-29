@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load django_bootstrap5 %}
 {% block content %}
 <h1>Денежные потоки</h1>
 <form method="get">
@@ -45,7 +46,7 @@
         <input type="date" name="date_to" value="{{ date_to }}">
     </label>
     <br>
-    <button type="submit">Фильтровать</button>
+    {% bootstrap_button button_type="submit" content="Фильтр" %}
     
 </form>
 <table>
@@ -83,7 +84,6 @@
     </tbody>
 </table>
 
-<a href="{% url 'entities:moneyflow_create' %}" class="add-button">➕ Добавить запись</a>
-
+<a href="{% url 'entities:moneyflow_create' %}" class="add-button btn btn-primary">➕ Добавить запись</a>
 
 {% endblock %}

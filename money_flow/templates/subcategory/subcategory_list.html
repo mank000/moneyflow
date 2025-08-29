@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load django_bootstrap5 %}
 {% block content %}
 <h1>Подкатегории</h1>
 <form method="get">
@@ -12,7 +12,7 @@
             </option>
         {% endfor %}
     </select>
-    <button type="submit">Фильтровать</button>
+    {% bootstrap_button button_type="submit" content="Фильтр" %}
 </form>
 <table border="1" cellpadding="5" cellspacing="0">
     <thead>
@@ -38,5 +38,5 @@
         {% endfor %}
     </tbody>
 </table>
-<a href="{% url 'entities:subcategory_create' %}" class="add-button">➕ Добавить запись</a>
+<a href="{% url 'entities:subcategory_create' %}" class="add-button btn btn-primary">➕ Добавить запись</a>
 {% endblock %}
