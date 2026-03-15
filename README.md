@@ -33,9 +33,9 @@ docker compose -f docker-compose.yml exec moneyflow python manage.py createsuper
 
 6. Перейти в браузере:
 
-Админка: http://localhost/admin/
+Админка: http://localhost:8000/admin/
 
-Основной интерфейс: http://localhost/
+Основной интерфейс: http://localhost:8000/
 
 ## Стек
 
