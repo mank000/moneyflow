@@ -75,6 +75,7 @@ class MoneyFlowTableView(FormMixin, ListView):
         return context
 
     def post(self, request, *args, **kwargs):
+        self.object_list = self.get_queryset()
         form = self.get_form()
         if form.is_valid():
             form.save()
